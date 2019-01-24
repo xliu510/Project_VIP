@@ -1,8 +1,8 @@
-Team 3 Project 2 Proposal
+## Team 3 Project 2 Proposal
 
-Team name: Team VIP (Visualization and Insightful Project) 
+### Team name: Team VIP (Visualization and Insightful Project) 
 
-Topic: Crypto and Stock/Financial District
+#### Topic: Crypto and Stock/Financial District
 
 Relationship/Rationale: Track exchange rates for Crypto currencies for a given date range and visualize the ATM locations of these Crypto currencies.
 
