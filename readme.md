@@ -37,7 +37,7 @@ crypto ATMs: https://www.coinatmfinder.com/CoimATMs-API.php
 
 ![mainHTMLPage](Images/mainPage.png)
 ---
-![cryptoATMMap](Images/cryptoATM.png)
+![cryptoATM](Images/cryptoATM.png)
 ---
 ![cryptoHeatmap](Images/cryptoHeatmap.png)
 ---
