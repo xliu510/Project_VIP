@@ -34,3 +34,6 @@ Data Sources: JSON file links
 API for crypto and stocks: https://www.alphavantage.co/documentation/
 
 crypto ATMs: https://www.coinatmfinder.com/CoimATMs-API.php
+
+![mainPageCrypto](Images/mainPage.png)
+
