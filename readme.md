@@ -36,8 +36,8 @@ API for crypto and stocks: https://www.alphavantage.co/documentation/
 crypto ATMs: https://www.coinatmfinder.com/CoimATMs-API.php
 
 ![mainHTMLPage](Images/mainPage.png)
----
+
 ![cryptoATM](Images/cryptoATM.png)
----
+
 ![cryptoHeatmap](Images/cryptoHeatmap.png)
----
+
