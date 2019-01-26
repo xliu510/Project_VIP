@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>Blueprint: Horizontal Slide Out Menu</title>
 		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/default.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/default.css") }} />
+		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/component.css") }} />
 		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
@@ -69,7 +69,7 @@
 			  <section>
 				
 				<h3>{{ crypto.news_title1 }}</h3>
-				<p>{{ crypto.news_paragraph1 }}</p>
+				<p><a class={{ crypto.news_paragraph1 }} href="https://github.com/xliu510/Project_VIP"</p>
 				<h3>{{ crypto.news_title2 }}</h3>
 				<p>{{ crypto.news_paragraph2 }}</p>
 				<h3>{{ crypto.news_title3 }}</h3>
