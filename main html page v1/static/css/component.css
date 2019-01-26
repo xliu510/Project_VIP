@@ -1,10 +1,18 @@
 @font-face {
 	font-family: 'bpmenu';
-	src:url('../fonts/bpmenu/bpmenu.eot');
-	src:url('../fonts/bpmenu/bpmenu.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/bpmenu/bpmenu.woff') format('woff'),
-		url('../fonts/bpmenu/bpmenu.ttf') format('truetype'),
-		url('../fonts/bpmenu/bpmenu.svg#bpmenu') format('svg');
+	src:url('/static/fonts/bpmenu/bpmenu.eot');
+	src:url('/static/fonts/bpmenu/bpmenu.eot?#iefix') format('embedded-opentype'),
+		url('/static/fonts/bpmenu/bpmenu.woff') format('woff'),
+		url('/static/fonts/bpmenu/bpmenu.ttf') format('truetype'),
+		url('/static/fonts/bpmenu/bpmenu.svg#bpmenu') format('svg');
+
+	/* src:url({{ url_for ( "static" , filename="/bpmenu.eot") }});
+	src:url({{ url_for ( "static" , filename="/bpmenu.eot?#iefix")}}) format('embedded-opentype'),
+		url({{ url_for ( "static" , filename="/bpmenu.woff")}}) format('woff'),
+		url({{ url_for ( "static" , filename="/bpmenu.ttf")}}) format('truetype'),
+		url({{ url_for ( "static" , filename="/bpmenu.svg#bpmenu")}}) format('svg'); */
+
+
 	font-weight: normal;
 	font-style: normal;
 }
@@ -315,4 +323,20 @@
 		min-height: 0;
 		margin: 0;
 	}
+
 }
+
+#mybutton {
+	background-color: #47a3da; /* Green */
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 12px;
+  }
+  

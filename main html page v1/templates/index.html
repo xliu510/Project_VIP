@@ -8,7 +8,7 @@
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/default.css") }} />
 		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/component.css") }} />
-		<script src="js/modernizr.custom.js"></script>
+		<script src="../static/js/modernizr.custom.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -26,18 +26,18 @@
 							<li>
 								<a href="#">Crypto</a>
 								<ul class="cbp-hssubmenu">
-									<li><a href="#"><img src="images/BTC.svg" alt="bitcoin svg"/><span>Bitcoin</span></a></li>
-									<li><a href="#"><img src="images/DASH.svg" alt="dash svg"/><span>Dash</span></a></li>
-									<li><a href="#"><img src="images/ETH.svg" alt="ethereum svg"/><span>Ethereum</span></a></li>
-									<li><a href="#"><img src="images/LTC.svg" alt="litecoin svg"/><span>Litecoin</span></a></li>
-									<li><a href="#"><img src="images/XRP.svg" alt="xrp svg"/><span>XRP</span></a></li>
+									<li><a href="#"><img src="../static/images/BTC.svg" alt="bitcoin svg"/><span>Bitcoin</span></a></li>
+									<li><a href="#"><img src="../static/images/DASH.svg" alt="dash svg"/><span>Dash</span></a></li>
+									<li><a href="#"><img src="../static/images/ETH.svg" alt="ethereum svg"/><span>Ethereum</span></a></li>
+									<li><a href="#"><img src="../static/images/LTC.svg" alt="litecoin svg"/><span>Litecoin</span></a></li>
+									<li><a href="#"><img src="../static/images/XRP.svg" alt="xrp svg"/><span>XRP</span></a></li>
 								</ul>
 							</li>
 							<li>
 								<a href="#">Stocks</a>
 								<ul class="cbp-hssubmenu cbp-hssub-rows">
-									<li><a href="#"><img src="images/dowJones.png" alt="dowjones png"/><span>Dow Jones Index</span></a></li>
-									<li><a href="#"><img src="images/sp500.png" alt="s&p 500 png"/><span>S&P 500 Index</span></a></li>
+									<li><a href="#"><img src="../static/images/dowJones.png" alt="dowjones png"/><span>Dow Jones Index</span></a></li>
+									<li><a href="#"><img src="../static/images/sp500.png" alt="s&p 500 png"/><span>S&P 500 Index</span></a></li>
 								</ul>
 							</li>
 							<li>
@@ -62,14 +62,14 @@
 		<div class="container">
 			<div class="jumbotron text-left">
 			  
-			<p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Click here for Latest News on Crypto</a></p>
+			<p><a class="btn btn-primary btn-lg" id= "mybutton" href="/scrape" role="button">Click here for Latest News on Crypto</a></p>
 
 			  <h2>Latest News on Cryptocurrency:</h2>
 			  
 			  <section>
 				
 				<h3>{{ crypto.news_title1 }}</h3>
-				<p><a class={{ crypto.news_paragraph1 }} href="https://github.com/xliu510/Project_VIP"</p>
+				<p>{{ crypto.news_paragraph1 }}</p>
 				<h3>{{ crypto.news_title2 }}</h3>
 				<p>{{ crypto.news_paragraph2 }}</p>
 				<h3>{{ crypto.news_title3 }}</h3>
@@ -85,7 +85,7 @@
 		
 		
 		
-		<script src="js/cbpHorizontalSlideOutMenu.min.js"></script>
+		<script src="../static/js/cbpHorizontalSlideOutMenu.min.js"></script>
 		<script>
 			var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
 		</script>

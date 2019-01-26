@@ -13,7 +13,7 @@ def init_browser():
 def scrape_info():
     browser = init_browser()
 
-    # Visit Crypto Nasa website
+    # Visit Crypto website
    
     crypto_currency_news = "https://cointelegraph.com/tags/cryptocurrencies"
     browser.visit(crypto_currency_news)
@@ -61,45 +61,45 @@ def scrape_info():
     browser.quit()
 
 
-    url = "https://cointelegraph.com/tags/cryptocurrencies"
+    # url = "https://cointelegraph.com/tags/cryptocurrencies"
 
-    # Getting the webpage, creating a Response object.
-    response = requests.get(url)
+    # # Getting the webpage, creating a Response object.
+    # response = requests.get(url)
 
-    # Extracting the source code of the page.
-    data = response.text
+    # # Extracting the source code of the page.
+    # data = response.text
 
-    # Passing the source code to BeautifulSoup to create a BeautifulSoup object for it.
-    soup = BeautifulSoup(data, 'lxml')
+    # # Passing the source code to BeautifulSoup to create a BeautifulSoup object for it.
+    # soup = BeautifulSoup(data, 'lxml')
 
-    # Extracting all the <a> tags into a list.
-    tags = soup.select('.post-preview-item-inline__title-link')
+    # # Extracting all the <a> tags into a list.
+    # tags = soup.select('.post-preview-item-inline__title-link')
 
-    # Extracting URLs from the attribute href in the <a> tags.
+    # # Extracting URLs from the attribute href in the <a> tags.
     
-    link_list = [tag.get("href") for tag in tags[0:5]]
+    # link_list = [tag.get("href") for tag in tags[0:5]]
 
-    # Close the browser after scraping
-    browser.quit()
+    # # Close the browser after scraping
+    # browser.quit()
 
 
     # Store data in a dictionary
     crypto_data = {
         "news_title1": news_title1,
         "news_paragraph1": news_paragraph1,
-        "link_list1": link_list[0],
+        # "link_list1": link_list[0],
         "news_title2": news_title2,
         "news_paragraph2": news_paragraph2,
-        "link_list2": link_list[1],        
+        # "link_list2": link_list[1],        
         "news_title3": news_title3,
         "news_paragraph3": news_paragraph3,
-        "link_list3": link_list[2],        
+        # "link_list3": link_list[2],        
         "news_title4": news_title4,
         "news_paragraph4": news_paragraph4,
-        "link_list4": link_list[3],
+        # "link_list4": link_list[3],
         "news_title5": news_title5,
         "news_paragraph5": news_paragraph5,
-        "link_list5": link_list[4],
+        # "link_list5": link_list[4],
 
         }
 
