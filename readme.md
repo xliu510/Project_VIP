@@ -1,5 +1,4 @@
 ## Team 3 Project VIP 
----
 
 ### Topic: Crypto and Stock/Financial District
 
