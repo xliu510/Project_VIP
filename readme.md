@@ -1,8 +1,7 @@
-## Team 3 Project 2 Proposal
+## Team 3 Project VIP 
+---
 
-### Team name: Team VIP (Visualization and Insightful Project) 
-
-#### Topic: Crypto and Stock/Financial District
+### Topic: Crypto and Stock/Financial District
 
 Relationship/Rationale: Track exchange rates for Crypto currencies for a given date range and visualize the ATM locations of these Crypto currencies.
 
@@ -28,6 +27,7 @@ Example 12-15  https://moderndata.plot.ly/15-python-and-r-charts-with-interactiv
 
 Create a graph comparing trading volume of the 5 cryptocurrency that we are looking into versus major stock exchanges in US (Nasdaq and Dow Jones) - we can use API/SQL for the data redring and plotly for graph….
 
+---
 
 Data Sources: JSON file links
 
@@ -35,12 +35,13 @@ API for crypto and stocks: https://www.alphavantage.co/documentation/
 
 crypto ATMs: https://www.coinatmfinder.com/CoimATMs-API.php
 
+---
+
 ![mainHTMLPage](Images/mainPage.png)
+
+![plotlyLine](Images/Plotly_Plot.PNG)
 
 ![cryptoATM](Images/cryptoATM.PNG)
 
 ![cryptoHeatmap](Images/cryptoHeatmap.PNG)
-
-![plotlyLine](Images/Plotly_Plot.PNG)
-
 
