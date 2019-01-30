@@ -1,4 +1,4 @@
-var rawDataURL = "BTC_currency_daily_USD.csv";
+var rawDataURL = "/static/csv/ETH_currency_daily_USD.csv";
 
 function  init() {
     var xField = 'Date';
@@ -35,7 +35,7 @@ function  init() {
 
         var data = prepData(rawData);
         var layout = {
-            title: 'Bitcoin Closing Price in USD',
+            title: 'Ether Closing Price in USD',
             xaxis: {
                 rangeselector: selectorOptions,
                 rangeslider: {}

@@ -1,4 +1,4 @@
-var rawDataURL = "ETH_currency_daily_USD.csv";
+var rawDataURL = "/static/csv/LTC_currency_daily_USD.csv";
 
 function  init() {
     var xField = 'Date';
@@ -35,7 +35,7 @@ function  init() {
 
         var data = prepData(rawData);
         var layout = {
-            title: 'Ether Closing Price in USD',
+            title: 'LiteCoin Closing Price in USD',
             xaxis: {
                 rangeselector: selectorOptions,
                 rangeslider: {}

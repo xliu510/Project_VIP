@@ -1,4 +1,4 @@
-var rawDataURL = "INX_daily_adjusted.csv";
+var rawDataURL = "/static/csv/XRP_currency_daily_USD.csv";
 
 function  init() {
     var xField = 'Date';
@@ -35,7 +35,7 @@ function  init() {
 
         var data = prepData(rawData);
         var layout = {
-            title: 'S&P 500 Closing Price in USD',
+            title: 'XRP Closing Price in USD',
             xaxis: {
                 rangeselector: selectorOptions,
                 rangeslider: {}

@@ -3,6 +3,11 @@ from bs4 import BeautifulSoup as bs
 import time
 import urllib.request
 from urllib.request import urlopen
+import re
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+
 
 def init_browser():
     # @NOTE: Replace the path with your actual path to the chromedriver
@@ -61,19 +66,25 @@ def scrape_info():
     browser.quit()
 
 
-    # url = "https://cointelegraph.com/tags/cryptocurrencies"
+    url = "https://cointelegraph.com/tags/cryptocurrencies"
 
-    # # Getting the webpage, creating a Response object.
-    # response = requests.get(url)
+    # Getting the webpage, creating a Response object.
+    response = requests.get(url)
 
-    # # Extracting the source code of the page.
-    # data = response.text
+    # Extracting the source code of the page.
+    data = response.text
 
-    # # Passing the source code to BeautifulSoup to create a BeautifulSoup object for it.
-    # soup = BeautifulSoup(data, 'lxml')
+    # Passing the source code to BeautifulSoup to create a BeautifulSoup object for it.
+    soup = BeautifulSoup(data, 'lxml')
 
-    # # Extracting all the <a> tags into a list.
-    # tags = soup.select('.post-preview-item-inline__title-link')
+    # Extracting all the <a> tags into a list.
+    tags = soup.select('.post-preview-item-inline__title-link')
+
+    link_list1 = tags[0].get("href")
+    link_list2 = tags[1].get("href")
+    link_list3 = tags[2].get("href")
+    link_list4 = tags[3].get("href")
+    link_list5 = tags[4].get("href")
 
     # # Extracting URLs from the attribute href in the <a> tags.
     
@@ -87,19 +98,19 @@ def scrape_info():
     crypto_data = {
         "news_title1": news_title1,
         "news_paragraph1": news_paragraph1,
-        # "link_list1": link_list[0],
+        "link_list1": link_list1,
         "news_title2": news_title2,
         "news_paragraph2": news_paragraph2,
-        # "link_list2": link_list[1],        
+        "link_list2": link_list2,        
         "news_title3": news_title3,
         "news_paragraph3": news_paragraph3,
-        # "link_list3": link_list[2],        
+        "link_list3": link_list3,        
         "news_title4": news_title4,
         "news_paragraph4": news_paragraph4,
-        # "link_list4": link_list[3],
+        "link_list4": link_list4,
         "news_title5": news_title5,
         "news_paragraph5": news_paragraph5,
-        # "link_list5": link_list[4],
+        "link_list5": link_list5,
 
         }
 

@@ -34,5 +34,19 @@ def scrape():
     return redirect("/")
 
 
+
+
+@app.route("/Crypto/<my_currency>/<currency_page>")
+def render_currency_info(my_currency,currency_page):
+    # Find one record of data from the mongo database
+    full_data = mongo.db.collection.find_one()
+    my_dict = {"data":full_data,
+        "currency":my_currency,
+        "currency_page":currency_page,
+        "js_file_name": my_currency + "_app.js"}
+    # Return template and data
+    return render_template("currency_template.html", crypto=my_dict)
+
+
 if __name__ == "__main__":
     app.run(debug=True)

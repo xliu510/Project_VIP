@@ -1,4 +1,4 @@
-var rawDataURL = "DASH_currency_daily_USD.csv";
+var rawDataURL = "/static/csv/INX_daily_adjusted.csv";
 
 function  init() {
     var xField = 'Date';
@@ -35,7 +35,7 @@ function  init() {
 
         var data = prepData(rawData);
         var layout = {
-            title: 'DASH Closing Price in USD',
+            title: 'S&P 500 Closing Price in USD',
             xaxis: {
                 rangeselector: selectorOptions,
                 rangeslider: {}

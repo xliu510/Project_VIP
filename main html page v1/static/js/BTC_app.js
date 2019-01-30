@@ -1,4 +1,4 @@
-var rawDataURL = "DJI_daily_adjusted.csv";
+var rawDataURL = "/static/csv/BTC_currency_daily_USD.csv";
 
 function  init() {
     var xField = 'Date';
@@ -35,7 +35,7 @@ function  init() {
 
         var data = prepData(rawData);
         var layout = {
-            title: 'Dow Jones Index Closing Price in USD',
+            title: 'Bitcoin Closing Price in USD',
             xaxis: {
                 rangeselector: selectorOptions,
                 rangeslider: {}

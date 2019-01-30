@@ -1,4 +1,4 @@
-var rawDataURL = "XRP_currency_daily_USD.csv";
+var rawDataURL = "/static/csv/DJI_daily_adjusted.csv";
 
 function  init() {
     var xField = 'Date';
@@ -35,7 +35,7 @@ function  init() {
 
         var data = prepData(rawData);
         var layout = {
-            title: 'XRP Closing Price in USD',
+            title: 'Dow Jones Index Closing Price in USD',
             xaxis: {
                 rangeselector: selectorOptions,
                 rangeslider: {}

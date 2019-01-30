@@ -26,7 +26,7 @@
 							<li>
 								<a href="#">Crypto</a>
 								<ul class="cbp-hssubmenu">
-									<li><a href="Plotly Plot Module/Crypto/BTC/BTC_index.html"><img src="../static/images/BTC.svg" alt="bitcoin svg"/><span>Bitcoin</span></a></li>
+									<li><a href="Crypto/BTC/BTC_index.html"><img src="../static/images/BTC.svg" alt="bitcoin svg"/><span>Bitcoin</span></a></li>
 									<li><a href="Plotly Plot Module/Crypto/DASH/DASH_index.html"><img src="../static/images/DASH.svg" alt="dash svg"/><span>Dash</span></a></li>
 									<li><a href="Plotly Plot Module/Crypto/ETH/ETH_index.html"><img src="../static/images/ETH.svg" alt="ethereum svg"/><span>Ethereum</span></a></li>
 									<li><a href="Plotly Plot Module/Crypto/LTC/LTC_index.html"><img src="../static/images/LTC.svg" alt="litecoin svg"/><span>Litecoin</span></a></li>
@@ -70,20 +70,29 @@
 			  
 			<p><a class="btn btn-primary btn-lg" id= "mybutton" href="/scrape" role="button">Click here for Latest News on Crypto</a></p>
 
-			  <h2>Latest News on Cryptocurrency:</h2>
+			  <h2>Latest News on Cryptocurrency from Cointelegraph:</h2>
 			  
 			  <section>
 				
 				<h3>{{ crypto.news_title1 }}</h3>
-				<p>{{ crypto.news_paragraph1 }}</p>
+				<p> <a{{ crypto.news_paragraph1 }}> </a></p>
+				<p>{{ crypto.link_list1}}</p>
+
 				<h3>{{ crypto.news_title2 }}</h3>
 				<p>{{ crypto.news_paragraph2 }}</p>
+				<p>{{ crypto.link_list2}}</p>
+
 				<h3>{{ crypto.news_title3 }}</h3>
 				<p>{{ crypto.news_paragraph3 }}</p>
+				<p>{{ crypto.link_list3}}</p>
+
 				<h3>{{ crypto.news_title4 }}</h3>
 				<p>{{ crypto.news_paragraph4 }}</p>
+				<p>{{ crypto.link_list4}}</p>
+
 				<h3>{{ crypto.news_title5 }}</h3>
 				<p>{{ crypto.news_paragraph5 }}</p>
+				<p>{{ crypto.link_list5}}</p>
 
 				</section>
 			  </div>
