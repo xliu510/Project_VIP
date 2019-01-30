@@ -8,6 +8,7 @@
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/default.css") }} />
 		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/component.css") }} />
+		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/link_layout.css") }} />
 		<script src="../static/js/modernizr.custom.js"></script>
 	</head>
 	<body>
@@ -27,17 +28,17 @@
 								<a href="#">Crypto</a>
 								<ul class="cbp-hssubmenu">
 									<li><a href="Crypto/BTC/BTC_index.html"><img src="../static/images/BTC.svg" alt="bitcoin svg"/><span>Bitcoin</span></a></li>
-									<li><a href="Plotly Plot Module/Crypto/DASH/DASH_index.html"><img src="../static/images/DASH.svg" alt="dash svg"/><span>Dash</span></a></li>
-									<li><a href="Plotly Plot Module/Crypto/ETH/ETH_index.html"><img src="../static/images/ETH.svg" alt="ethereum svg"/><span>Ethereum</span></a></li>
-									<li><a href="Plotly Plot Module/Crypto/LTC/LTC_index.html"><img src="../static/images/LTC.svg" alt="litecoin svg"/><span>Litecoin</span></a></li>
-									<li><a href="Plotly Plot Module/Crypto/XRP/XRP_index.html"><img src="../static/images/XRP.svg" alt="xrp svg"/><span>XRP</span></a></li>
+									<li><a href="Crypto/DASH/DASH_index.html"><img src="../static/images/DASH.svg" alt="dash svg"/><span>Dash</span></a></li>
+									<li><a href="Crypto/ETH/ETH_index.html"><img src="../static/images/ETH.svg" alt="ethereum svg"/><span>Ethereum</span></a></li>
+									<li><a href="Crypto/LTC/LTC_index.html"><img src="../static/images/LTC.svg" alt="litecoin svg"/><span>Litecoin</span></a></li>
+									<li><a href="Crypto/XRP/XRP_index.html"><img src="../static/images/XRP.svg" alt="xrp svg"/><span>XRP</span></a></li>
 								</ul>
 							</li>
 							<li>
 								<a href="#">Stocks</a>
 								<ul class="cbp-hssubmenu cbp-hssub-rows">
-									<li><a href="Plotly Plot Module/Stock/DJI/DJI_index.html"><img src="../static/images/dowJones.png" alt="dowjones png"/><span>Dow Jones Index</span></a></li>
-									<li><a href="Plotly Plot Module/Stock/INX/INX_index.html"><img src="../static/images/sp500.png" alt="s&p 500 png"/><span>S&P 500 Index</span></a></li>
+									<li><a href="Crypto/DJI/DJI_index.html"><img src="../static/images/dowJones.png" alt="dowjones png"/><span>Dow Jones Index</span></a></li>
+									<li><a href="Crypto/INX/INX_index.html"><img src="../static/images/sp500.png" alt="s&p 500 png"/><span>S&P 500 Index</span></a></li>
 								</ul>
 							</li>
 							<li>
@@ -75,24 +76,19 @@
 			  <section>
 				
 				<h3>{{ crypto.news_title1 }}</h3>
-				<p> <a{{ crypto.news_paragraph1 }}> </a></p>
-				<p>{{ crypto.link_list1}}</p>
+				<a id="link_website" href = "{{ crypto.link_list1}}"> {{ crypto.news_paragraph1 }}</a>
 
 				<h3>{{ crypto.news_title2 }}</h3>
-				<p>{{ crypto.news_paragraph2 }}</p>
-				<p>{{ crypto.link_list2}}</p>
+				<a id="link_website" href = "{{ crypto.link_list2}}"> {{ crypto.news_paragraph2 }}</a>
 
 				<h3>{{ crypto.news_title3 }}</h3>
-				<p>{{ crypto.news_paragraph3 }}</p>
-				<p>{{ crypto.link_list3}}</p>
+				<a id="link_website" href = "{{ crypto.link_list3}}"> {{ crypto.news_paragraph3 }}</a>
 
 				<h3>{{ crypto.news_title4 }}</h3>
-				<p>{{ crypto.news_paragraph4 }}</p>
-				<p>{{ crypto.link_list4}}</p>
+				<a id="link_website" href = "{{ crypto.link_list4}}"> {{ crypto.news_paragraph4 }}</a>
 
 				<h3>{{ crypto.news_title5 }}</h3>
-				<p>{{ crypto.news_paragraph5 }}</p>
-				<p>{{ crypto.link_list5}}</p>
+				<a id="link_website" href = "{{ crypto.link_list5}}"> {{ crypto.news_paragraph5 }}</a>
 
 				</section>
 			  </div>
