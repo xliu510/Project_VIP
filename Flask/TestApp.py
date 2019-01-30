@@ -3,7 +3,8 @@ import pymysql
 import numpy as np
 import pandas as pd
 import sqlalchemy
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.ext.automap import automap_base
+import pandas as pd
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, Column, Integer, String, ForeignKey
 #More fun Modules 
@@ -13,52 +14,28 @@ from flask import (
     jsonify,
     request,
     redirect)
+
 from flask_sqlalchemy import SQLAlchemy
 from config import Config
 app = Flask(__name__)
+
 
 #connect to Database 
 #https://docs.sqlalchemy.org/en/latest/core/engines.html
 import pymysql
 pymysql.install_as_MySQLdb()
+
+
+#Create Database (Make sure to change credentials & load SQL file)
+ 
+Base = automap_base()
 engine = create_engine('mysql://root:Maggie1ne@localhost:3306/CryptoStockAnalysis')
-#Session.configure(bind=engine)
-#SQLDataBase = engine.execute("SELECT * FROM currency_daily_btc_usd")
-#for record in SQLDataBase:
- #    print(record)
-#app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db/data.sqlite"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = "False"
-app.config['SQLALCHEMY_DATABASE_URI'] = engine
-db = SQLAlchemy(app)
+Base.prepare(engine, reflect=True)
 
-class data(db.Model):
-    __tablename__= 'data'
-    
-    id = db.Column(db.Integer, primary_key=True)
-    Date = db.Column(db.Integer)
-    Open = db.Column(db.Integer)
-    High = db.Column(db.Integer)
-    Low = db.Column(db.Integer)
-    Close = db.Column(db.Integer)
-    Volume = db.Column(db.Integer)
-    Market_Cap = db.Column(db.Integer)
-    def __repr__(self):
-        return '<data %r>' % (self.nickname)
+Base.metadata
 
-@app.before_first_request
-def setup():
-    db.create_all()
+#Read Database - Tablenames 
+engine.table_names()
 
-@app.route("/")
-def home():
-    """Render Home Page."""
-    return render_template("index.html")
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
-
-
-
+#Setup Flask 
 
