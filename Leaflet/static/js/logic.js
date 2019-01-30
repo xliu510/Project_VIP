@@ -24,14 +24,14 @@ function createMap(atmlocations, heat) {
 
   // Create an overlayMaps object to hold the marker layer
   var overlayMaps = {
-    "ATM Locations": atmlocations,
+    "Locations": atmlocations,
     "Heatmap": heat
   };
 
   // Creating map object
   var myMap = L.map("map", {
     center: [41.2565, -95.9345],
-    zoom: 5,
+    zoom: 4,
     layers: [lightmap, atmlocations]
   });
 
