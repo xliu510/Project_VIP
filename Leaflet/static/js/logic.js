@@ -24,14 +24,14 @@ function createMap(atmlocations, heat) {
 
   // Create an overlayMaps object to hold the marker layer
   var overlayMaps = {
-    "ATM Locations": atmlocations,
+    "Locations": atmlocations,
     "Heatmap": heat
   };
 
   // Creating map object
   var myMap = L.map("map", {
     center: [41.2565, -95.9345],
-    zoom: 5,
+    zoom: 4,
     layers: [lightmap, atmlocations]
   });
 
@@ -60,7 +60,7 @@ d3.json("atm-data.html", function(response) {
 
     // Add a new marker to the cluster group and bind a pop-up
     markers.addLayer(L.marker([lat, lng])
-      .bindPopup(address));
+      .bindPopup('<a href="http://maps.google.com/maps?cbll=' + lat + ',' + lng + '&layer=c">'+address+'</a>'));
   }
 
 
@@ -81,3 +81,5 @@ d3.json("atm-data.html", function(response) {
   createMap(markers, heat);
 
 });
+
+//http://maps.google.com/maps?cbll=40.7128,-74.0060&layer=c
