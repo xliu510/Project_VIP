@@ -75,7 +75,7 @@ def inx():
 
 @app.route("/map")
 def map():
-    return render_template("/leaflet/index.html")
+    return render_template("leaflet_index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

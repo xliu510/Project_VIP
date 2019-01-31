@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Stock and Crypto Analysis</title>
+
+    <!-- Leaflet JS & CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
+    <!-- d3 JS -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Marker Cluster JS & CSS -->
+    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/leaflet_style.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Anime libraries -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,900' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>var ml = { timelines: {}};</script>
+
+  </head>
+  <body>    
+        <div class="moving-letters">
+            <h1 class="ml1">
+                <span class="text-wrapper">
+                    <span class="line line1"></span>
+                    <span class="letters">Crypto ATM locations</span>
+                    <span class="line line2"></span>
+                </span>
+            </h1>
+            
+            <!--more-->
+            
+                <script>
+                // Wrap every letter in a span
+                    $('.ml1 .letters').each(function(){
+                    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+                    });
+                    ml.timelines["ml1"] = anime.timeline({loop: true})
+                    .add({
+                        targets: '.ml1 .letter',
+                        scale: [0.3,1],
+                        opacity: [0,1],
+                        translateZ: 0,
+                        easing: "easeOutExpo",
+                        duration: 600,
+                        delay: function(el, i) {
+                        return 70 * (i+1)
+                        }
+                    }).add({
+                        targets: '.ml1 .line',
+                        scaleX: [0,1],
+                        opacity: [0.5,1],
+                        easing: "easeOutExpo",
+                        duration: 700,
+                        offset: '-=875',
+                        delay: function(el, i, l) {
+                        return 80 * (l - i);
+                        }
+                    }).add({
+                        targets: '.ml1',
+                        opacity: 0,
+                        duration: 1000,
+                        easing: "easeOutExpo",
+                        delay: 1000
+                    });
+                </script>
+            
+                <style>
+                    .ml1 {
+                    font-weight: 900;
+                    font-size: 3.5em;
+                    }
+                    .ml1 .letter {
+                    display: inline-block;
+                    line-height: 1em;
+                    }
+                    .ml1 .text-wrapper {
+                    position: relative;
+                    display: inline-block;
+                    padding-top: 0.1em;
+                    padding-right: 0.05em;
+                    padding-bottom: 0.15em;
+                    }
+                    .ml1 .line {
+                    opacity: 0;
+                    position: absolute;
+                    left: 0;
+                    height: 3px;
+                    width: 100%;
+                    background-color: #fff;
+                    transform-origin: 0 0;
+                    }
+                    .ml1 .line1 { top: 0; }
+                    .ml1 .line2 { bottom: 0; }
+                </style>
+            
+            
+        </div>     
+
+    <div id="map"></div>
+
+    <script src="{{url_for('static', filename='js/config.js')}}"></script>
+    <!-- Leaflet-Choropleth JavaScript -->
+    <script src="{{url_for('static', filename='js/leaflet-heat.js')}}"></script>
+    <script src="{{url_for('static', filename='js/animemap.js')}}"></script>
+    <script src="{{url_for('static', filename='js/logic.js')}}"></script>
+
+    <!-- <script type="text/javascript" src="static/js/config.js"></script> -->
+    <!-- Leaflet-Choropleth JavaScript -->
+    <!-- <script type="text/javascript" src="static/js/leaflet-heat.js"></script>    
+    <script type="text/javascript" src="static/js/animemap.js"></script>
+    <script type="text/javascript" src="static/js/logic.js"></script> -->
+
+    
+  </body>
+</html>
