@@ -50,5 +50,6 @@ crypto ATMs: https://www.coinatmfinder.com/CoimATMs-API.php
 1) Download and Install Mongo DB
 https://www.mongodb.com/download-center/compass?filter=enterprise
 1) Git Clone Repository
+1) $ pip install (modules)
 1) Run app.py file
 1) View in browser
