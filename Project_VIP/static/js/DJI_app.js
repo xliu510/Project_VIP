@@ -1,80 +1,59 @@
-var rawDataURL = "/static/csv/DJI_daily_adjusted.csv";
+Plotly.d3.csv("/static/csv/DJI_daily_adjusted.csv", function(err, rows){
 
-function  init() {
-    var xField = 'Date';
-    var yField = 'Volume';
-
-    var selectorOptions = {
-        buttons: [{
-            step: 'month',
-            stepmode: 'backward',
-            count: 1,
-            label: '1m'
-        }, {
-            step: 'month',
-            stepmode: 'backward',
-            count: 6,
-            label: '6m'
-        }, {
-            step: 'year',
-            stepmode: 'todate',
-            count: 1,
-            label: 'YTD'
-        }, {
-            step: 'year',
-            stepmode: 'backward',
-            count: 1,
-            label: '1y'
-        }, {
-            step: 'all',
-        }],
-    };
-
-    Plotly.d3.csv(rawDataURL, function(err, rawData) {
-        if(err) throw err;
-
-        var data = prepData(rawData);
-        var layout = {
-            title: 'Dow Jones Index Volume',
-            xaxis: {
-                rangeselector: selectorOptions,
-                rangeslider: {}
-            },
-            yaxis: {
-                fixedrange: true
-            }
-        };
-
-        Plotly.plot('graph', data, layout, {showSendToCloud: true});
-    });
-
-    function prepData(rawData) {
-        var x = [];
-        var y = [];
-
-        rawData.forEach(function(datum, i) {
-
-            x.push(new Date(datum[xField]));
-            y.push(datum[yField]);
-        });
-
-        return [{
-            mode: 'lines',
-            x: x,
-            y: y
-        }];
+    function unpack(rows, key) {
+    return rows.map(function(row) { return row[key]; });
+  }
+  
+    
+  var trace1 = {
+    type: "scatter",
+    mode: "lines",
+    name: 'Dow Jones High',
+    x: unpack(rows, 'Date'),
+    y: unpack(rows, 'High'),
+    line: {color: '#17BECF'}
+  }
+  
+  var trace2 = {
+    type: "scatter",
+    mode: "lines",
+    name: 'Dow Jones Low',
+    x: unpack(rows, 'Date'),
+    y: unpack(rows, 'Low'),
+    line: {color: '#7F7F7F'}
+  }
+  
+  var data = [trace1,trace2];
+      
+  var layout = {
+    title: 'Dow Jones High and Low', 
+    xaxis: {
+      autorange: true, 
+      range: ['2000-01-03', '2019-01-29'], 
+      rangeselector: {buttons: [
+          {
+            count: 1, 
+            label: '1m', 
+            step: 'month', 
+            stepmode: 'backward'
+          }, 
+          {
+            count: 6, 
+            label: '6m', 
+            step: 'month', 
+            stepmode: 'backward'
+          }, 
+          {step: 'all'}
+        ]}, 
+      rangeslider: {range: ['2000-01-03', '2019-01-29']}, 
+      type: 'date'
+    }, 
+    yaxis: {
+      autorange: true, 
+      range: [86.8700008333, 138.870004167], 
+      type: 'linear'
     }
-}
-
-
-
-function updatePlotly(newdata) {
-    var graphLine = document.getElementById("graph");
-    Plotly.restyle(graphLine, "values", [newdata]);
-}
-
-
-
-
-init();
-
+  };
+  
+  Plotly.newPlot('graph', data, layout, {showSendToCloud: true});
+  })
