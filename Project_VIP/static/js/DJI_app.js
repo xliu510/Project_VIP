@@ -20,10 +20,28 @@ Plotly.d3.csv("/static/csv/DJI_daily_adjusted.csv", function(err, rows){
     name: 'Dow Jones Low',
     x: unpack(rows, 'Date'),
     y: unpack(rows, 'Low'),
+    line: {color: '#30011E'}
+  }
+  
+  var trace3 = {
+    type: "scatter",
+    mode: "lines",
+    name: 'Dow Jones Open',
+    x: unpack(rows, 'Date'),
+    y: unpack(rows, 'Open'),
+    line: {color: '#B68F40'}
+  }
+  
+  var trace4 = {
+    type: "scatter",
+    mode: "lines",
+    name: 'Dow Jones Close',
+    x: unpack(rows, 'Date'),
+    y: unpack(rows, 'Close'),
     line: {color: '#7F7F7F'}
   }
   
-  var data = [trace1,trace2];
+  var data = [trace1,trace2,trace3,trace4];
       
   var layout = {
     title: 'Dow Jones High and Low', 
