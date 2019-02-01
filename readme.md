@@ -24,7 +24,7 @@ Relationship/Rationale: Track price change for Cryptocurrencies and Stock Index 
 
 ---
 
-Data Sources: JSON file links
+### Data Sources: JSON file links
 
 API for crypto and stocks: https://www.alphavantage.co/documentation/
 
