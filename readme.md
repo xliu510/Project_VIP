@@ -1,13 +1,11 @@
 ## Team 3 Project VIP 
 
-### Topic: Crypto and Stock/Financial District
+### Topic: Crypto and Stock
 
-Relationship/Rationale: Track exchange rates for Crypto currencies for a given date range and visualize the ATM locations of these Crypto currencies.
+Relationship/Rationale: Track price change for Cryptocurrencies for a given date range and visualize the ATM locations of Cryptocurrencies.
 
 Design Ideas for Crypto: 
-Leaflet Map that will list using markers all of the Crypto ATM’s in the USA and whatever other countries we decide on.
-Map will contain filter to allow users to select any specific Crypto.
-i) Focus on analysis of top ten Cryptocurrencies; Bitcoin, Ethereum, Litecoin, Ripple, Stellar, EOS, Tron, Binance Coin, Cardano, Bitcoin Cash.
+Leaflet Map that will list using markers all of the Crypto ATM’s in the USA.i) Focus on analysis of top ten Cryptocurrencies; Bitcoin, Ethereum, Litecoin, Ripple, Stellar, EOS, Tron, Binance Coin, Cardano, Bitcoin Cash.
 Map will contain a search field to allow user to find the number of Crypto ATM’s in a given geographical location.
 Advanced: Allowed user to find the closest Crypto ATM to their geographical location.
 Advanced: Use custom marker icons
