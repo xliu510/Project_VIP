@@ -6,7 +6,8 @@ Relationship/Rationale: Track price change for Cryptocurrencies and Stock Index 
 
 ---
 
-Design: 
+### Design: 
+
 1) Main index.html page 
     - Allow user to select the price index of Cryptocurrency, Stock, and Map.
 1) Leaflet Map 
