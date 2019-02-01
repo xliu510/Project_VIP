@@ -1,5 +1,7 @@
 # Team 3 Project VIP 
 
+---
+
 ### Topic: Crypto and Stock
 
 Relationship/Rationale: Track price change for Cryptocurrencies and Stock Index for a given date range and visualize the ATM locations of Cryptocurrencies.
