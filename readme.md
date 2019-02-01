@@ -2,20 +2,13 @@
 
 ### Topic: Crypto and Stock
 
-Relationship/Rationale: Track price change for Cryptocurrencies for a given date range and visualize the ATM locations of Cryptocurrencies.
+Relationship/Rationale: Track price change for Cryptocurrencies and Stock Index for a given date range and visualize the ATM locations of Cryptocurrencies.
 
-Design Ideas for Crypto: 
-Leaflet Map that will list using markers all of the Crypto ATM’s in the USA.i) Focus on analysis of top ten Cryptocurrencies; Bitcoin, Ethereum, Litecoin, Ripple, Stellar, EOS, Tron, Binance Coin, Cardano, Bitcoin Cash.
-Map will contain a search field to allow user to find the number of Crypto ATM’s in a given geographical location.
-Advanced: Allowed user to find the closest Crypto ATM to their geographical location.
-Advanced: Use custom marker icons
-https://leafletjs.com/examples/custom-icons/
-Each marker will contain tool tip to give info about Crypto ATM.
-Suggestions: Probably should limit the type of crypto currency to a few of the most popular ones, due to time constraint.
-D3 Bubble Chart that will list by country or state the number of Crypto ATM’s in the USA or World.
-Size of bubble chart will be based off of the number of Crypto ATM’s available.
-https://beta.observablehq.com/@mbostock/d3-bubble-chart
-Plotly Dashboard outlining individual tickers https://plot.ly/products/dash/ (possible idea - jarvis) - Integrate Plotly’s API?
+Crypto: 
+1) Leaflet Map that will list using markers all of the Crypto ATM’s in the USA.
+ * Each leaflet marker will contain tool tip to give the location of the Cryptocurrency ATM and link to google street maps view of that location.
+1) Plotly plot outlining price change of 5 cryptocurrencies.
+1) 
 ...
 
 Design Ideas for Stock/Financial District: 
