@@ -37,7 +37,7 @@ crypto ATMs: https://www.coinatmfinder.com/CoimATMs-API.php
 
 ### Scraping Crypto News
 
-
+![scraping](Images/scrapingPage.PNG)
 
 ### Plotly Plot Page
 
