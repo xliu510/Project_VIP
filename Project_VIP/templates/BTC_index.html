@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bitcoin Plot</title>
+  <link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/bootstrap.min.css") }} />
+  <link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/style.css") }} />
+  <!-- <link rel="stylesheet" href="../static/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+  <script src="https://unpkg.com/simple-statistics@5.0.0/dist/simple-statistics.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>
+        Bitcoin
+      </h1>
+      <p></p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-body">
+            Profile
+          </div>
+        </div>
+        <div class="company">
+            Bitcoin is a decentralized digital currency that enables instant payments to anyone, anywhere in the world. 
+            Bitcoin uses peer-to-peer technology to operate with no central authority: transaction management and money issuance are carried out collectively by the network.
+            <br><br>
+            The original Bitcoin software by Satoshi Nakamoto was released under the MIT license. Most client software, derived or "from scratch", also use open source licensing.
+            <br><br>
+            Bitcoin is the first successful implementation of a distributed crypto-currency, described in part in 1998 by Wei Dai on the cypherpunks mailing list. 
+            Building upon the notion that money is any object, or any sort of record, accepted as payment for goods and services and repayment of debts in a given country or socio-economic context, 
+            Bitcoin is designed around the idea of using cryptography to control the creation and transfer of money, rather than relying on central authorities.
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            Performance
+          </div>
+        </div>
+        <!-- <div id="plot"></div> -->
+        <div id="graph"></div>
+      </div>
+    </div>
+    <!-- <br>
+    <div class="row">
+      <div class="col-md-12">
+        <table id="summary-table" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Open</th>
+              <th>High</th>
+              <th>Low</th>
+              <th>Close</th>
+              <th>Volume</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div> -->
+    </div>
+  </div>
+
+    <script src="{{url_for('static', filename='js/BTC_app.js')}}"></script>
+
+</body>
+
+</html>
