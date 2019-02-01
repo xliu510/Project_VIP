@@ -8,8 +8,8 @@
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/default.css") }} />
 		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/component.css") }} />
-		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/link_layout.css") }} />
 		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/index.css") }} />
+		<link rel="stylesheet" type="text/css" href= {{ url_for ( "static" , filename="css/style.css") }} />
 		<script src="../static/js/modernizr.custom.js"></script>
 	</head>
 	<body>
@@ -68,37 +68,50 @@
 				</nav>
 			</div>
 		</div>
-		<br>
-		<div class="container">
-			<div class="jumbotron">
-			  
-				<p><a class="btn btn-primary btn-lg" id= "mybutton" href="/scrape" role="button">Click here to Scrape Latest News on Crypto</a></p>
 
-				<section>
-					<h3>{{ crypto.news_title1 }}</h3>
-					<a class="link_website" href = "{{ crypto.link_list1}}"> {{ crypto.news_paragraph1 }}</a>
-
-					<h3>{{ crypto.news_title2 }}</h3>
-					<a class="link_website" href = "{{ crypto.link_list2}}"> {{ crypto.news_paragraph2 }}</a>
-
-					<h3>{{ crypto.news_title3 }}</h3>
-					<a class="link_website" href = "{{ crypto.link_list3}}"> {{ crypto.news_paragraph3 }}</a>
-
-					<h3>{{ crypto.news_title4 }}</h3>
-					<a class="link_website" href = "{{ crypto.link_list4}}"> {{ crypto.news_paragraph4 }}</a>
-
-					<h3>{{ crypto.news_title5 }}</h3>
-					<a class="link_website" href = "{{ crypto.link_list5}}"> {{ crypto.news_paragraph5 }}</a>
-				</section>
-
-			  </div>
+		<div class="grid-container-css">
+			<div class="grid-item-css">
+				<img src="../static/images/image_home.jpg" alt="Capital Markets">  
+			</div>
+			<div class="grid-item-css-p">
+				<p>
+					A cryptocurrency is a digital asset designed to work as a medium of exchange that uses strong cryptography to secure financial transactions, control the creation of additional units, and verify the transfer of assets.
+					<br><br>
+					Cryptocurrencies use decentralized control as opposed to centralized digital currency and central banking systems.
+					The decentralized control of each cryptocurrency works through distributed ledger technology, typically a blockchain, that serves as a public financial transaction database.
+					<br><br>
+					Bitcoin, first released as open-source software in 2009, is generally considered the first decentralized cryptocurrency.
+					Since the release of bitcoin, over 4,000 altcoins (alternative variants of bitcoin, or other cryptocurrencies) have been created. 
+				</p>
+			</div>
 		</div>
-		
-		
-		
-		<script src="../static/js/cbpHorizontalSlideOutMenu.min.js"></script>
-		<script>
-			var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
-		</script>
+
+		<div class="grid-item-css-s">	
+		<p><a class="btn btn-primary btn-lg" id= "mybutton" href="/scrape" role="button">Click here to Scrape Latest News on Crypto</a></p>
+
+		<section>
+			<h3>{{ crypto.news_title1 }}</h3>
+			<a class="link_website" href = "{{ crypto.link_list1}}"> {{ crypto.news_paragraph1 }}</a>
+
+			<h3>{{ crypto.news_title2 }}</h3>
+			<a class="link_website" href = "{{ crypto.link_list2}}"> {{ crypto.news_paragraph2 }}</a>
+
+			<h3>{{ crypto.news_title3 }}</h3>
+			<a class="link_website" href = "{{ crypto.link_list3}}"> {{ crypto.news_paragraph3 }}</a>
+
+			<h3>{{ crypto.news_title4 }}</h3>
+			<a class="link_website" href = "{{ crypto.link_list4}}"> {{ crypto.news_paragraph4 }}</a>
+
+			<h3>{{ crypto.news_title5 }}</h3>
+			<a class="link_website" href = "{{ crypto.link_list5}}"> {{ crypto.news_paragraph5 }}</a>
+		</section>
+
+		</div>
+	</div><br><br><br>
+
+	<script src="../static/js/cbpHorizontalSlideOutMenu.min.js"></script>
+	<script>
+		var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
+	</script>
 	</body>
 </html>

@@ -44,7 +44,7 @@ Plotly.d3.csv("/static/csv/DJI_daily_adjusted.csv", function(err, rows){
   var data = [trace1,trace2,trace3,trace4];
       
   var layout = {
-    title: 'Dow Jones High and Low', 
+    title: 'Dow Jones', 
     xaxis: {
       autorange: true, 
       range: ['2000-01-03', '2019-01-29'], 
