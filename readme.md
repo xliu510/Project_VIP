@@ -39,11 +39,11 @@ crypto ATMs: https://www.coinatmfinder.com/CoimATMs-API.php
 
 ![scraping](Images/scrapingPage.PNG)
 
-### Plotly Plot Page
+### Plotly Page
 
 ![plotlyLine](Images/plotPage.PNG)
 
-### Leaflet Map Page
+### Leaflet Page
 
 ![cryptoATM](Images/cryptoATM.PNG)
 
