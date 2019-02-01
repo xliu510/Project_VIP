@@ -4,18 +4,22 @@
 
 Relationship/Rationale: Track price change for Cryptocurrencies and Stock Index for a given date range and visualize the ATM locations of Cryptocurrencies.
 
-Crypto: 
-1) Leaflet Map that will list using markers all of the Crypto ATM’s in the USA.
- * Each leaflet marker will contain tool tip to give the location of the Cryptocurrency ATM and link to google street maps view of that location.
-1) Plotly plot outlining price change of 5 cryptocurrencies.
-1) 
-...
+---
 
-Design Ideas for Stock/Financial District: 
-A Flask page that contain a scrap button that will retrieve the latest stock info for certain stocks that will automatically generate a plot. For stocks, we will consider Dow Jones Index and S&P 500 Index since they have a very good representation of the stock market.
-Example 12-15  https://moderndata.plot.ly/15-python-and-r-charts-with-interactive-controls-buttons-dropdowns-and-sliders/
-
-Create a graph comparing trading volume of the 5 cryptocurrency that we are looking into versus major stock exchanges in US (Nasdaq and Dow Jones) - we can use API/SQL for the data redring and plotly for graph….
+Design: 
+1) Main index.html page 
+    - Allow user to select the price index of Cryptocurrency, Stock, and Map.
+1) Leaflet Map 
+    - Using markers to pin point all of the Crypto ATM’s in the USA.
+    - Using a Heatmap to highlight the more densely populated Crypto ATM locations.
+    - Each leaflet marker will contain tool tip to give coordinates or address of the Cryptocurrency ATM 
+    - Each leaflet tool tip will link to google streets view of that location.
+1) Plotly 
+    - Brief description of each Cryptocurrency and Stock Index. 
+    - Plot the price changes for Cryptocurrency and Stock with interactive slider and buttons.
+1) Scrape latest Cryptocurrency news.
+    - Using a mongoDB to store the latest crypto news.
+    - Create links to the latest Cryptocurrency news on the main index.html page after scraping.
 
 ---
 
@@ -27,9 +31,19 @@ crypto ATMs: https://www.coinatmfinder.com/CoimATMs-API.php
 
 ---
 
+### Main Page
+
 ![mainHTMLPage](Images/mainPage.png)
 
+### Scraping Crypto News
+
+
+
+### Plotly Plot Page
+
 ![plotlyLine](Images/plotPage.PNG)
+
+### Leaflet Map Page
 
 ![cryptoATM](Images/cryptoATM.PNG)
 
@@ -38,6 +52,7 @@ crypto ATMs: https://www.coinatmfinder.com/CoimATMs-API.php
 ---
 
 ## Requirements
+
 1) Download and Install Mongo DB
 https://www.mongodb.com/download-center/compass?filter=enterprise
 1) Git Clone Repository
